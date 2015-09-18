@@ -62,6 +62,7 @@ public class PlayerVariables : MonoBehaviour {
 		// Här nollställer vi ett gäng med variabler för att få spelaren att börja om spelet istället för att helst starta om scenen. 
 		health = 100f;
 		damageTimer = 1f;
+		GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 		// Sätt position, som finns under detta gameObjects transform, till Vector3n startPos.
 		transform.position = startPos;
 		GetComponent<Collider2D>().enabled = true;
