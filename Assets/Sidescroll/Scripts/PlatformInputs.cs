@@ -26,8 +26,8 @@ public class PlatformInputs : MonoBehaviour {
 
 		// Vi bör hoppa när vi använder Space-knappen. Detta ska vi bara göra när vi är grounded. Dvs, byt ut "false" i if-satsen nedan mot någonting som letar efter en typ av GetKeyDown under Input-klassen. 
 		if(grounded && Input.GetKeyDown(KeyCode.Space)){
-		//	rigidBody.velocity += new Vector2(rigidBody.velocity.x,jumpHeight);
-			rigidBody.AddForce(new Vector2(0f,700f));
+			rigidBody.velocity += new Vector2(rigidBody.velocity.x,jumpHeight);
+		
 		}
 
 		anim.SetFloat("Speed", Mathf.Abs(horizontalDirection));
@@ -38,8 +38,8 @@ public class PlatformInputs : MonoBehaviour {
 			Flip(-1);
 
 		// Vi borde förflytta spelaren via funktionen Translate som finns under dess transform. Här bör horizontalDirection, speed och Time.deltaTime användas
-		//transform.Translate (horizontalDirection * speed * Time.deltaTime, 0f, 0f);
-		rigidBody.AddForce(new Vector2(horizontalDirection * 1000f * Time.deltaTime, 0f));
+		transform.Translate (horizontalDirection * speed * Time.deltaTime, 0f, 0f);
+
 	}
 
 	void Flip (int facingRight) {

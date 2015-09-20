@@ -66,7 +66,7 @@ public class PlayerVariables : MonoBehaviour {
 		// Sätt position, som finns under detta gameObjects transform, till Vector3n startPos.
 		transform.position = startPos;
 		GetComponent<Collider2D>().enabled = true;
-		GetComponent<PlatformInputs>().enabled = true;
+		//GetComponent<PlatformInputs>().enabled = true;
 		transform.localScale = new Vector3(transform.localScale.x, 1f, 1f);
 
 		// Sätt tillbaka spelarens hälsa till 100f. 
