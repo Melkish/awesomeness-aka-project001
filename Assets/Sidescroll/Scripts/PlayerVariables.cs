@@ -8,17 +8,18 @@ public class PlayerVariables : MonoBehaviour {
 
 	[HideInInspector]
 	public int coins = 0;
+	public float timeleft = 5f;
 	
 	private float damageTimer = 1f;
 
 	private Slider healthSlider;
-	private Text coinUI;
+	private Text timeUI;
 	private Vector3 startPos;
 
 
 	void Start () {
 		healthSlider = GameObject.Find("HealthSliderUI").GetComponent<Slider>();
-		coinUI = GameObject.Find("CoinTextUI").GetComponent<Text>();
+		timeUI = GameObject.Find("TimeTextUI").GetComponent<Text>();
 		startPos = transform.position;
 	}
 
@@ -26,7 +27,9 @@ public class PlayerVariables : MonoBehaviour {
 		// damageTimer bör öka med tiden som gått från senaste uppdate-loopen. Tiden räknas ut med Time.deltaTime;
 		damageTimer = Time.deltaTime + damageTimer;
 		healthSlider.value = Mathf.Lerp(healthSlider.value, health, Time.deltaTime);
-		coinUI.text = coins+"";
+		//coinUI.text = coins+"";
+		timeleft = timeleft - Time.deltaTime;
+		timeUI.text ="Time left " + Mathf.Ceil (timeleft) + " ";
 	}
 
 	public void Harm(float dmg){
