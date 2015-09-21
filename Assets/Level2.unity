@@ -271,7 +271,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1783731295
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 53bbfa9a641b991489dcc5a9332d0877, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -728,6 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   coins: 0
+  timeleft: 20
 --- !u!1 &373131110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,9 +1211,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .256411791}
+  m_Offset: {x: -.00973701477, y: .168783188}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.51282358}
+  m_Size: {x: .668957829, y: 1.33756638}
 --- !u!114 &540518222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4048,7 +4049,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1024582385
+  m_SortingLayerID: -1783731295
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e7d3381eedf452f47ae43b4943bf5284, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -8,7 +8,7 @@ public class PlayerVariables : MonoBehaviour {
 
 	[HideInInspector]
 	public int coins = 0;
-	public float timeleft = 45f;
+	public float timeleft = 20f;
 	
 	private float damageTimer = 1f;
 
