@@ -8,7 +8,7 @@ public class PlayerVariables : MonoBehaviour {
 
 	[HideInInspector]
 	public int coins = 0;
-	public float timeleft = 5f;
+	public float timeleft = 45f;
 	
 	private float damageTimer = 1f;
 
@@ -30,8 +30,15 @@ public class PlayerVariables : MonoBehaviour {
 		//coinUI.text = coins+"";
 		timeleft = timeleft - Time.deltaTime;
 		timeUI.text ="Time left " + Mathf.Ceil (timeleft) + " ";
+		if (timeleft < 0f) {
+			StartCoroutine(EndGame());
+		}
 	}
-
+	IEnumerator EndGame() {
+		timeUI.text="Game Over";
+		yield return new WaitForSeconds (2f);
+		Application.LoadLevel (0);
+	}
 	public void Harm(float dmg){
 
 		// Om damageTimer är större än en sekund bör vi sänka health med damage. Vi bör även sätta damageTimer till 0f för att nollställa timern.

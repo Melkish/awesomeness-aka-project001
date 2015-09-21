@@ -24,6 +24,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Level3.unity
   - enabled: 1
+    path: Assets/Startscreen.unity
+  - enabled: 1
     path: Assets/Level1.unity
   - enabled: 1
     path: Assets/Level2.unity
